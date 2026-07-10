@@ -85,6 +85,34 @@ verifiability + tool-density predict fit. See `research-factory/library/`.)
 - Non-trivial logic (a gate, a parser, a money/security path) leaves ONE runnable check — an
   assert-based `--selftest`, no test framework.
 - Mark deliberate shortcuts with a `ponytail:` comment naming the ceiling + upgrade path.
+- Bundled scripts (from Anthropic's skill-authoring docs): **solve, don't punt** — handle errors in
+  the script, don't leave them for the model; **no voodoo constants** — justify every config value in a
+  comment; **forward slashes** in all paths; MCP tools use fully-qualified `Server:tool` names.
+
+**Deliver it as a skill/command — grounded in Anthropic's Agent-Skills docs**
+(source: platform.claude.com/docs/…/agent-skills/best-practices — primary, this is the standard, not our habit)
+- **The `description` is what makes it trigger** — the one load-bearing field. Write it **third person**
+  ("Builds X…", never "I/you can…"), and include BOTH *what it does* AND *when to use it* (concrete
+  triggers/phrases). Max 1024 chars. `name`: ≤64 chars, lowercase-hyphens only, no "claude"/"anthropic".
+- **SKILL.md body under 500 lines.** Over that → split into referenced files loaded on demand.
+- **Progressive disclosure, one level deep** — reference files link *directly* from SKILL.md, never
+  nested (the model previews nested files with `head` and misses content). A reference file >100 lines
+  gets a table of contents.
+- **Match freedom to fragility** — high-freedom text steps for open tasks; low-freedom "run exactly
+  this" for fragile/consistency-critical ones.
+- **Eval-first** (maps to the factory's own verify thesis): before writing the skill, define 2-3
+  concrete success scenarios + a baseline. Build the minimum that passes them — don't document imagined
+  needs.
+- **Scripts are executed, not loaded** — say "run `x.py`" (execute) vs "see `x.py`" (read as reference);
+  execution costs only the output's tokens.
+
+**Skill vs Command vs Subagent vs MCP** (the delivery choice)
+- **Skill** — reusable knowledge/procedure the model auto-loads when a task matches (the default for a
+  factory's conventions + process, e.g. this one).
+- **Slash command** — a user-typed shortcut for a fixed action (e.g. `ship-<output>`).
+- **Subagent** — an isolated-context delegated task (use for the parallel/fan-out work, like the
+  reviewers or research fan-out).
+- **MCP** — a connection to an *external* system/tool. Not for in-repo logic.
 
 **Organization**
 - Thin sibling repo, not a merged mono-framework (the family shares a *pattern*, not a runtime).
