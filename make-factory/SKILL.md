@@ -75,6 +75,11 @@ verifiability + tool-density predict fit. See `research-factory/library/`.)
   tool checks reliably (Google's migration-factory lesson). The verify step is deterministic code, not
   an LLM opinion.
 - **Verify = the lit state.** Not the artifact on the bench — the activated state.
+- **Panels decorrelate by lens first, salt for extras.** N agents on the same prompt share every blind
+  spot — the ensemble buys nothing (research-factory's verify panel learned this: 3 identical voters →
+  diverse lenses). Give each voter a distinct lens/role; need more voters than lenses → salt the extras
+  (shuffle evidence order, vary the stance), don't clone. Never jitter a seeded eval — regression gates
+  need determinism.
 - **Compound = memory.** Each run leaves the next ahead (a profile / library / ratchet). Verified on
   use: remembered claims are hints, re-checked before trusted, so they self-heal as the world changes.
 
