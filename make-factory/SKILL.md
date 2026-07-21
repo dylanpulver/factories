@@ -1,6 +1,6 @@
 ---
 name: make-factory
-description: Build a new factory — a repeatable pipeline that turns an idea into a finished, quality-assured artifact of one output type. Use when the user says "this is a factory to make", "make a factory for X", "let's build an X factory", "/make-factory", or decides some repeated multi-step creative/knowledge output should become a factory. Runs the process (check fit → research the domain's standards → scaffold the shared spine → register it) and applies the factory-building conventions.
+description: Build a new factory — a repeatable pipeline turning an idea into one finished, quality-assured artifact type. Use for 'make a factory for X', 'this is a factory to make', '/make-factory', or when repeated multi-step output should become a factory.
 ---
 
 # make-factory
