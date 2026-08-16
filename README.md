@@ -27,21 +27,21 @@ Two invariants make it a factory and not a checklist:
 
 | Factory | Makes | Repo | Verify (its lit state) |
 |---|---|---|---|
-| **code** | code changes, shipped | `code-factory` | tests pass · fail-before/pass-after · differential |
-| **research** | decision-ready sourced brief | `research-factory` | every claim → a real source · 3-vote adversarial |
-| **landing-page** | a live landing page | `landing-page-factory` | Lighthouse CWV · WCAG-AA (axe) · SEO — honest that *conversion* isn't statically verifiable |
+| **code** | code changes, shipped | [code-factory](https://github.com/dylanpulver/code-factory) | tests pass · fail-before/pass-after · differential |
+| **research** | decision-ready sourced brief | [research-factory](https://github.com/dylanpulver/research-factory) | every claim → a real source · 3-vote adversarial |
+| **landing-page** | a live landing page | `landing-page-factory` *(not yet public)* | Lighthouse CWV · WCAG-AA (axe) · SEO — honest that *conversion* isn't statically verifiable |
 
 ## The method: research generates the standards
 
 Don't hand-author a factory's judgment layer — **generate it.** Run the `research` factory on
 "best practices for <output>"; the brief becomes the new factory's reviewers + verify bars. The
 research factory pays for itself twice: as a tool, and as the factory-builder.
-(See `code-factory/docs/building-factories.md`.)
+(See [code-factory/docs/building-factories.md](https://github.com/dylanpulver/code-factory/blob/main/docs/building-factories.md).)
 
 ## What to build next
 
 The candidate map — ~40 output types tiered by whether their lit-state is machine-checkable — lives in
-`code-factory/docs/factory-catalog.md`. High-verifiability code-family + knowledge/data outputs are
+[code-factory/docs/factory-catalog.md](https://github.com/dylanpulver/code-factory/blob/main/docs/factory-catalog.md). High-verifiability code-family + knowledge/data outputs are
 where factories pay off; taste-dominant outputs (song/art) get only the mechanical spine.
 
 ## Discipline
