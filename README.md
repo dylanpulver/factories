@@ -48,3 +48,7 @@ where factories pay off; taste-dominant outputs (song/art) get only the mechanic
 - **Use before build** — a new factory earns its build from real friction, not imagination.
 - **Verify the lit state or don't build** — no checkable output, no factory.
 - **Name the pattern, don't merge the code** — the framework is this convention, not a shared runtime.
+
+---
+
+Built by [Dylan Pulver](https://dylanpulver.com), software engineer and entrepreneur in Toronto.
